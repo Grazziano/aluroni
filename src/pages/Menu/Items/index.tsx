@@ -33,14 +33,14 @@ export default function Items(props: Props) {
 
   function orderBy(newList: typeof items) {
     switch (order) {
-      case 'porcao':
-        return orderIncreasingProperty(newList, 'size');
-      case 'qtd_pessoas':
-        return orderIncreasingProperty(newList, 'serving');
-      case 'preco':
-        return orderIncreasingProperty(newList, 'price');
-      default:
-        return newList;
+    case 'porcao':
+      return orderIncreasingProperty(newList, 'size');
+    case 'qtd_pessoas':
+      return orderIncreasingProperty(newList, 'serving');
+    case 'preco':
+      return orderIncreasingProperty(newList, 'price');
+    default:
+      return newList;
     }
   }
 
