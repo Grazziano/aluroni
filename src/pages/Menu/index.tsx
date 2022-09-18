@@ -29,7 +29,7 @@ export default function Menu() {
           <Order order={order} setOrder={setOrder} />
         </div>
 
-        <Items />
+        <Items search={search} filter={filter} order={order} />
       </section>
     </main>
   );
