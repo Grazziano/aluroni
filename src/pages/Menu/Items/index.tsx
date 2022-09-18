@@ -24,14 +24,21 @@ export default function Items(props: Props) {
     return true;
   }
 
+  function orderIncreasingProperty(
+    list: typeof items,
+    property: 'size' | 'serving' | 'price'
+  ) {
+    return list.sort((a, b) => (a[property] > b[property] ? 1 : -1));
+  }
+
   function orderBy(newList: typeof items) {
     switch (order) {
       case 'porcao':
-        return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
+        return orderIncreasingProperty(newList, 'size');
       case 'qtd_pessoas':
-        return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
+        return orderIncreasingProperty(newList, 'serving');
       case 'preco':
-        return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
+        return orderIncreasingProperty(newList, 'price');
       default:
         return newList;
     }
