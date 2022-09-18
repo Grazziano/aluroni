@@ -12,7 +12,7 @@ interface Props {
 export default function Items(props: Props) {
   const [list, setList] = useState(items);
 
-  const { search, filter } = props;
+  const { search, filter, order } = props;
 
   function searchTest(title: string) {
     const regex = new RegExp(search, 'i');
@@ -24,12 +24,25 @@ export default function Items(props: Props) {
     return true;
   }
 
+  function orderBy(newList: typeof items) {
+    switch (order) {
+      case 'porcao':
+        return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
+      case 'qtd_pessoas':
+        return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
+      case 'preco':
+        return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
+      default:
+        return newList;
+    }
+  }
+
   useEffect(() => {
     const newList = items.filter(
       (item) => searchTest(item.title) && filterTest(item.category.id)
     );
-    setList(newList);
-  }, [search, filter]);
+    setList(orderBy(newList));
+  }, [search, filter, order]);
 
   return (
     <div className={styles.items}>
