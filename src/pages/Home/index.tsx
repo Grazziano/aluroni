@@ -1,6 +1,7 @@
 import menu from 'data/menu.json';
 import styles from './Home.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
+import nossaCasa from 'assets/nossa_casa.png';
 
 export default function Home() {
   let recommendedDishes = [...menu];
@@ -20,6 +21,17 @@ export default function Home() {
             <button className={styles.recomendado__botao}>Ver mais</button>
           </div>
         ))}
+      </div>
+
+      <h3 className={stylesTheme.titulo}>Nossa casa</h3>
+      <div className={styles.nossaCasa}>
+        <img src={nossaCasa} alt="Casa do aluroni" />
+        <div className={styles.nossaCasa__endereco}>
+          Rua Vergueiro, 3185
+          <br />
+          <br />
+          Vila Mariana - SP
+        </div>
       </div>
     </section>
   );
