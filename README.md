@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Aluroni
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔨 Funcionalidades do projeto
 
-## Available Scripts
+## ✔️ Técnicas e tecnologias utilizadas
 
-In the project directory, you can run:
+Lista de tecnologias que foram usadas nesse projeto:
 
-### `npm start`
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠️ Abrir e rodar o projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Para abrir e rodar o projeto, execute npm i para instalar as dependências e npm start para iniciar o projeto.
 
-### `npm test`
+Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no seu navegador.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Usando Docker
 
-### `npm run build`
+Se tiver o docker-compose instalado no computador, após clonar o projeto basta rodar o comando abaixo para criar e iniciar os contêineres:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+docker-compose up -d
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para paralisar e remover todos os contêineres use o comando:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+docker-compose down
+```
 
-### `npm run eject`
+## 📚 Mais informações
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Entre em contato pelo [linkedin](https://www.linkedin.com/in/grazziano-fagundes/).
