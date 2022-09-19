@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Filters from './Filters';
 import Order from './Order';
 import Items from './Items';
-import Header from 'components/Header';
 
 export default function Menu() {
   const [search, setSearch] = useState('');
@@ -13,8 +12,6 @@ export default function Menu() {
 
   return (
     <main>
-      <Header />
-
       <header className={styles.header}>
         <div className={styles.header__text}>A casa do código e da massa</div>
       </header>
