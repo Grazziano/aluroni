@@ -1,9 +1,9 @@
 import styles from './Item.module.scss';
-import classNames from 'classnames';
 import { Dish } from 'types/Dish';
+import TagsDish from 'components/TagsDish';
 
 export default function Item(props: Dish) {
-  const { title, description, category, size, serving, price, photo } = props;
+  const { title, description, photo } = props;
 
   return (
     <div className={styles.item}>
@@ -16,21 +16,7 @@ export default function Item(props: Dish) {
           <p>{description}</p>
         </div>
 
-        <div className={styles.item__tags}>
-          <div
-            className={classNames({
-              [styles.item__tipo]: true,
-              [styles[`item__tipo__${category.label.toLowerCase()}`]]: true,
-            })}
-          >
-            {category.label}
-          </div>
-          <div className={styles.item__porcao}>{size}g</div>
-          <div className={styles.item__qtd}>
-            Serve {serving} pessoa{serving === 1 ? '' : 's'}
-          </div>
-          <div className={styles.item__valor}>R$ {price.toFixed(2)}</div>
-        </div>
+        <TagsDish {...props} />
       </div>
     </div>
   );
