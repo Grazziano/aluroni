@@ -2,13 +2,16 @@ import { useNavigate, useParams } from 'react-router-dom';
 import styles from './Dish.module.scss';
 import menu from 'data/menu.json';
 import TagsDish from 'components/TagsDish';
+import NotFound from 'pages/NotFound';
 
 export default function Dish() {
   const { id } = useParams();
   const navigate = useNavigate();
   const dish = menu.find((item) => item.id === Number(id));
 
-  if (!dish) return '';
+  if (!dish) {
+    return <NotFound />;
+  }
 
   return (
     <>
