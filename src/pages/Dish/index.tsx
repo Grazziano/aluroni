@@ -1,8 +1,9 @@
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import styles from './Dish.module.scss';
 
 export default function Dish() {
-  const { id } = useParams();
+  const teste = useLocation();
+  console.log(teste);
 
   return <div>Prato</div>;
 }
