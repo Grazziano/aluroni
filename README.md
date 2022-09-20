@@ -1,6 +1,8 @@
 # Aluroni
 
-## 🔨 Funcionalidades do projeto
+![](public/app.png)
+
+Página para listagem de pratos do restaurante.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
@@ -33,6 +35,10 @@ Para paralisar e remover todos os contêineres use o comando:
 ```
 docker-compose down
 ```
+
+### Projeto em produção
+
+Este projeto pode ser visualizado neste [link](https://aluroni-eight.vercel.app/).
 
 ## 📚 Mais informações
 
