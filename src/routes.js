@@ -2,6 +2,7 @@ import Footer from 'components/Footer';
 import Layout from 'components/Layout';
 import Navbar from 'components/Navbar';
 import About from 'pages/About';
+import Dish from 'pages/Dish';
 import Home from 'pages/Home';
 import Menu from 'pages/Menu';
 import NotFound from 'pages/NotFound';
@@ -19,6 +20,7 @@ export default function AppRouter() {
             <Route path="about" element={<About />} />
           </Route>
           <Route path="*" element={<NotFound />} />
+          <Route path="dish/:id" element={<Dish />} />
         </Routes>
         <Footer />
       </Router>
