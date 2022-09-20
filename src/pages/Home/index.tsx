@@ -13,7 +13,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   function redirectToDetails(dish: typeof menu[0]) {
-    navigate(`/dish/${dish.id}`, { state: { ...dish } });
+    navigate(`/dish/${dish.id}`, { state: { dish } });
   }
 
   return (
