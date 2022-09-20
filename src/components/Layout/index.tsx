@@ -3,7 +3,7 @@ import styles from './Layout.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
 import React from 'react';
 
-export default function Layout({ children }: { children?: React.ReactNode }) {
+export default function Layout() {
   return (
     <>
       <header className={styles.header}>
@@ -11,7 +11,6 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
       </header>
       <div className={stylesTheme.container}>
         <Outlet />
-        {children}
       </div>
     </>
   );
