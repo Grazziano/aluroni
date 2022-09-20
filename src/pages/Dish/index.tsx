@@ -1,15 +1,20 @@
 import classNames from 'classnames';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from './Dish.module.scss';
 import menu from 'data/menu.json';
 
 export default function Dish() {
-  const { state } = useLocation();
-  const { dish } = state as { dish: typeof menu[0] };
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const dish = menu.find((item) => item.id === Number(id));
+
+  if (!dish) return '';
 
   return (
     <>
-      <button className={styles.voltar}>{'< Voltar'}</button>
+      <button className={styles.voltar} onClick={() => navigate(-1)}>
+        {'< Voltar'}
+      </button>
       <section className={styles.container}>
         <h1 className={styles.titulo}>{dish.title}</h1>
         <div className={styles.imagem}>
