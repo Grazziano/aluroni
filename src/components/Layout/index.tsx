@@ -1,8 +1,9 @@
 import { Outlet } from 'react-router-dom';
 import styles from './Layout.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
+import React from 'react';
 
-export default function Layout() {
+export default function Layout({ children }: { children?: React.ReactNode }) {
   return (
     <>
       <header className={styles.header}>
@@ -10,6 +11,7 @@ export default function Layout() {
       </header>
       <div className={stylesTheme.container}>
         <Outlet />
+        {children}
       </div>
     </>
   );

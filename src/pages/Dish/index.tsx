@@ -3,6 +3,7 @@ import styles from './Dish.module.scss';
 import menu from 'data/menu.json';
 import TagsDish from 'components/TagsDish';
 import NotFound from 'pages/NotFound';
+import Layout from 'components/Layout';
 
 export default function Dish() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ export default function Dish() {
   }
 
   return (
-    <>
+    <Layout>
       <button className={styles.voltar} onClick={() => navigate(-1)}>
         {'< Voltar'}
       </button>
@@ -28,6 +29,6 @@ export default function Dish() {
           <TagsDish {...dish} />
         </div>
       </section>
-    </>
+    </Layout>
   );
 }
